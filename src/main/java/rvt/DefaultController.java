@@ -14,13 +14,14 @@ public class DefaultController {
     
     @GetMapping(value = "/")
     ModelAndView index(@RequestParam(name="name", required=false, defaultValue="null") String name) {
-        Student student = new Student("John", "Smith", "a@a.lv", "DP2-4");
-        List<Student> students = new ArrayList<>();
-        students.add(student);
+        Money mon1 = new Money(10, 10);
+        Money mon2 = new Money(20, 20);
+
+        Money mon3 = mon1.plus(mon2);
 
         ModelAndView modelAndView = new ModelAndView("index");
-        modelAndView.addObject("students", students);
-        modelAndView.addObject("date", new Date().toString());
+        modelAndView.addObject("result", mon3);
         return modelAndView;
     }
+
 }
