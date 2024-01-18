@@ -12,14 +12,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DefaultController {
     
-    @GetMapping(value = "/")
-    ModelAndView index(@RequestParam(name="name", required=false, defaultValue="null") String name) {
+    @GetMapping(value = "/test")
+    public ModelAndView testAction() {
         Money mon1 = new Money(10, 10);
         Money mon2 = new Money(20, 20);
 
         Money mon3 = mon1.plus(mon2);
 
-        ModelAndView modelAndView = new ModelAndView("index");
+        ModelAndView modelAndView = new ModelAndView("test");
         modelAndView.addObject("result", mon3);
         return modelAndView;
     }
