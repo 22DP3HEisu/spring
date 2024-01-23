@@ -2,18 +2,26 @@ package rvt;
 
 public class Money {
     private final int euros;
-    private final int cents;
+    private final byte cents;
 
-    public Money(int euros, int cents) {
+    public Money(int euros, byte cents) {
         this.euros = euros;
         this.cents = cents;
+    }
+
+    public Money(int euros) {
+        this(euros, (byte) 0);
+    }
+
+    public Money(byte cents) {
+        this(0, cents);
     }
 
     public int euros() {
         return euros;
     }
 
-    public int cents() {
+    public byte cents() {
         return cents;
     }
 
@@ -36,9 +44,17 @@ public class Money {
             NewCent = Math.abs(NewCent);
         }
 
-        Money newMoney = new Money(NewEur, NewCent);
+        Money newMoney = new Money(NewEur, (byte) NewCent);
 
         return newMoney;
+    }
+
+    public Money plus(int euros) {
+        return this.plus(new Money(euros));
+    }
+    
+    public Money plus(byte cents) {
+        return this.plus(new Money(cents));
     }
 
     public Money minus(Money subtraction) {
@@ -52,9 +68,17 @@ public class Money {
             NewEur = 0;
         }
 
-        Money newMoney = new Money(NewEur, NewCent);
+        Money newMoney = new Money(NewEur, (byte) NewCent);
 
         return newMoney;
+    }
+
+    public Money minus(int euros) {
+        return this.minus(new Money(euros));
+    }
+
+    public Money minus(byte cents) {
+        return this.minus(new Money(cents));
     }
 
     public Boolean lessThan(Money Compare) {
