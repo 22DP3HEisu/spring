@@ -77,4 +77,12 @@ public class MoneyTest {
 
         assertEquals(true, result1);
     }
+
+    @Test
+    public void isMoneyEqual() {
+        Money mon1 = new Money(5, (byte) 50);
+        Money mon2 = new Money(5, (byte) 50);
+
+        assertEquals(mon1, mon2);
+    }
 }

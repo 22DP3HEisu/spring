@@ -87,4 +87,21 @@ public class Money {
 
         return Cents < CompareCents;
     }
+
+    public boolean equals(Object compare) {
+        if (this == compare) {
+            return true;
+        }
+
+        if (!(compare instanceof Money)) {
+            return false;
+        }
+
+        Money comparedMoney = (Money) compare;
+
+        if (comparedMoney.euros == this.euros && comparedMoney.cents == this.cents) {
+            return true;
+        }
+        return false;
+    }
 }

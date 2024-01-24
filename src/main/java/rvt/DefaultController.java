@@ -16,9 +16,9 @@ public class DefaultController {
     public ModelAndView testAction() {
         Money mon1 = new Money(10, (byte) 10);
         Money mon2 = new Money(20);
-        Money mon3 = new Money((byte) 10);
+        Money mon3 = new Money(10, (byte) 10);
 
-        Money result = mon1.plus(mon3);
+        boolean result = mon1.equals(mon3);
 
         ModelAndView modelAndView = new ModelAndView("test");
         modelAndView.addObject("result", result);
