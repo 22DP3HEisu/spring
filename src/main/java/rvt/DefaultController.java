@@ -1,6 +1,7 @@
 package rvt;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -14,14 +15,12 @@ public class DefaultController {
     
     @GetMapping(value = "/test")
     public ModelAndView testAction() {
-        Money mon1 = new Money(10, (byte) 10);
-        Money mon2 = new Money(20);
-        Money mon3 = new Money(10, (byte) 10);
+        int[] arr = {5, 7, -1, 4, 10};
 
-        boolean result = mon1.equals(mon3);
+        Sorter.Sort(arr);
 
         ModelAndView modelAndView = new ModelAndView("test");
-        modelAndView.addObject("result", result);
+        modelAndView.addObject("result", Arrays.toString(arr));
         return modelAndView;
     }
 
