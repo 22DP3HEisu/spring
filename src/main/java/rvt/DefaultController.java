@@ -19,9 +19,17 @@ public class DefaultController {
 
         Sorter.Sort(arr);
 
+        System.out.println(Searcher.BinarySearch(arr, 5));
+
         ModelAndView modelAndView = new ModelAndView("test");
         modelAndView.addObject("result", Arrays.toString(arr));
         return modelAndView;
     }
 
+    @GetMapping(value = "/signup")
+    public ModelAndView newSite() {
+        ModelAndView modelAndView = new ModelAndView("signup");
+        return modelAndView;
+    }
+    
 }

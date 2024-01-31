@@ -1,0 +1,36 @@
+
+/* Student Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  * {
+    background-color: rgb(46, 132, 161);
+    margin: 0px;
+    
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(23, 72, 88);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  label {
+    text-align: center;
+  }
+  
+  input {
+    text-align: center;
+  }

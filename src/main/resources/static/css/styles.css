@@ -6,7 +6,7 @@ table {
 }
 
 * {
-  background-color: #614949;
+  background-color: rgb(46, 132, 161);
   margin: 0px;
   
 }
@@ -24,6 +24,13 @@ p {
   font-weight: bold;
   margin-top: 5px;
   color: white;
-  background-color: rgb(149, 205, 255);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+  text-align: center;
+}
+
+input {
+  text-align: center;
 }
