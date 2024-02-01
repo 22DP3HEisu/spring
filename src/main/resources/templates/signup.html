@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport2" content="width=device-width, initial-scale=1.0">
     <title>Project2</title>
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
     <script src="/js/main.js"></script>
 </head>
-<form>
+<div align="center">
     <h1>Test site</h1>
-    <label for="fname" >First Name</label><br>
-    <input type="text" id="fname" name="fname" placeholder="Ievadiet savu vārdu"><br>
-    <label for="lname">Last Name</label><br>
-    <input type="text" id="lname" name="lname" placeholder="Ievadiet savu uzvārdu"><br>
-    <label for="group">Grupa</label><br>
-    <select name="group" id="group">
-        <option value="DP2-1">DP2-1</option>
-        <option value="DP2-2">DP2-2</option>
-        <option value="DP2-3">DP2-3</option>
-        <option value="DP2-4">DP2-4</option>
-    </select><br>
-    <input type="submit" value="submit">
-</form>
+    <form>
+        <label for="fname" >Full name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Ievadiet savu vārdu"><br>
+    
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" placeholder="Ievadiet savu e-pastu"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        
+        <label for="birthdate">Birthday (mm-dd-yyyy):</label>
+        <input type="date" id="birthdate" name="birthdate"><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender" name="gender" value="Male">Male
+        <input type="radio" id="gender" name="gender" value="Female">Female<br>
+
+        <label for="group">Grupa:</label>
+        <select name="group" id="group">
+            <option value="DP2-1">DP2-1</option>
+            <option value="DP2-2">DP2-2</option>
+            <option value="DP2-3">DP2-3</option>
+            <option value="DP2-4">DP2-4</option>
+        </select><br>
+
+        <button type="submit" value="submit">Submit
+    </form>
+</div>
 </html>

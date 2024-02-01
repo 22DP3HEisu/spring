@@ -3,6 +3,7 @@ package rvt;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -27,8 +28,10 @@ public class DefaultController {
     }
 
     @GetMapping(value = "/signup")
-    public ModelAndView newSite() {
+    public ModelAndView newSite(@RequestParam HashMap<String, String> params) {
         ModelAndView modelAndView = new ModelAndView("signup");
+
+        System.out.println(params.get("birthdate"));
         return modelAndView;
     }
     
